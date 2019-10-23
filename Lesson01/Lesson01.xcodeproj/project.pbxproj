@@ -15,8 +15,8 @@
 		CE58EB8D235F8E4A00BFB2DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE58EB8B235F8E4A00BFB2DC /* LaunchScreen.storyboard */; };
 		CE58EB96235F96B000BFB2DC /* ScoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58EB95235F96B000BFB2DC /* ScoreTableViewController.swift */; };
 		CE58EB98235F96C900BFB2DC /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58EB97235F96C900BFB2DC /* GameViewController.swift */; };
-		CE58EB9B235F9CDD00BFB2DC /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58EB9A235F9CDD00BFB2DC /* Question.swift */; };
 		CE58EB9E235F9E2500BFB2DC /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58EB9D235F9E2500BFB2DC /* Game.swift */; };
+		CE7C0F922360F51300773C95 /* ScoreCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C0F912360F51300773C95 /* ScoreCaretaker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +30,8 @@
 		CE58EB8E235F8E4A00BFB2DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE58EB95235F96B000BFB2DC /* ScoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreTableViewController.swift; sourceTree = "<group>"; };
 		CE58EB97235F96C900BFB2DC /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		CE58EB9A235F9CDD00BFB2DC /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		CE58EB9D235F9E2500BFB2DC /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		CE7C0F912360F51300773C95 /* ScoreCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCaretaker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +89,8 @@
 		CE58EB99235F9CCA00BFB2DC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CE58EB9D235F9E2500BFB2DC /* Game.swift */,
 				CE58EB9C235F9E0B00BFB2DC /* Manager */,
-				CE58EB9A235F9CDD00BFB2DC /* Question.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -98,7 +98,7 @@
 		CE58EB9C235F9E0B00BFB2DC /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				CE58EB9D235F9E2500BFB2DC /* Game.swift */,
+				CE7C0F912360F51300773C95 /* ScoreCaretaker.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -178,7 +178,7 @@
 				CE58EB96235F96B000BFB2DC /* ScoreTableViewController.swift in Sources */,
 				CE58EB9E235F9E2500BFB2DC /* Game.swift in Sources */,
 				CE58EB85235F8E4700BFB2DC /* ViewController.swift in Sources */,
-				CE58EB9B235F9CDD00BFB2DC /* Question.swift in Sources */,
+				CE7C0F922360F51300773C95 /* ScoreCaretaker.swift in Sources */,
 				CE58EB81235F8E4700BFB2DC /* AppDelegate.swift in Sources */,
 				CE58EB83235F8E4700BFB2DC /* SceneDelegate.swift in Sources */,
 			);
