@@ -38,5 +38,6 @@ extension ViewController: GameViewControllerDelegate {
         print(score.rightAnswer)
         Game.shared.gameSession = score
         Game.shared.addResult()
+        Game.shared.clearGameSession()
     }
 }

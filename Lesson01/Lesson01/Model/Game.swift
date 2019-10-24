@@ -39,7 +39,7 @@ final class Game {
     }
     
     func clearGameSession() {
-        
+        gameSession = nil
     }
 }
 
