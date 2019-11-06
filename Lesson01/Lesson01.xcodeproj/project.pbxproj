@@ -19,6 +19,7 @@
 		CE6440CC23707B8D007BB3AE /* QuestionsCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6440CB23707B8D007BB3AE /* QuestionsCaretaker.swift */; };
 		CE6440CF23707CD8007BB3AE /* Strategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6440CE23707CD8007BB3AE /* Strategy.swift */; };
 		CE7C0F922360F51300773C95 /* ScoreCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C0F912360F51300773C95 /* ScoreCaretaker.swift */; };
+		CED2D72E237361400079612B /* AddQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED2D72D237361400079612B /* AddQuestionViewController.swift */; };
 		CEF82FB3237213A50031D0E8 /* RandomStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF82FB2237213A50031D0E8 /* RandomStrategy.swift */; };
 		CEF82FB5237213FC0031D0E8 /* InSeriesStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF82FB4237213FC0031D0E8 /* InSeriesStrategy.swift */; };
 		CEF82FB723721A8E0031D0E8 /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF82FB623721A8E0031D0E8 /* Difficulty.swift */; };
@@ -43,6 +44,7 @@
 		CE6440CB23707B8D007BB3AE /* QuestionsCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsCaretaker.swift; sourceTree = "<group>"; };
 		CE6440CE23707CD8007BB3AE /* Strategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strategy.swift; sourceTree = "<group>"; };
 		CE7C0F912360F51300773C95 /* ScoreCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCaretaker.swift; sourceTree = "<group>"; };
+		CED2D72D237361400079612B /* AddQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionViewController.swift; sourceTree = "<group>"; };
 		CEF82FB2237213A50031D0E8 /* RandomStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomStrategy.swift; sourceTree = "<group>"; };
 		CEF82FB4237213FC0031D0E8 /* InSeriesStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InSeriesStrategy.swift; sourceTree = "<group>"; };
 		CEF82FB623721A8E0031D0E8 /* Difficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				CE58EB95235F96B000BFB2DC /* ScoreTableViewController.swift */,
 				CE58EB97235F96C900BFB2DC /* GameViewController.swift */,
 				CEF82FB8237222800031D0E8 /* DifficultyViewController.swift */,
+				CED2D72D237361400079612B /* AddQuestionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				CE58EB83235F8E4700BFB2DC /* SceneDelegate.swift in Sources */,
 				CEF82FB5237213FC0031D0E8 /* InSeriesStrategy.swift in Sources */,
 				CEF82FB3237213A50031D0E8 /* RandomStrategy.swift in Sources */,
+				CED2D72E237361400079612B /* AddQuestionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,8 +17,17 @@ class DifficultyViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        checkDifficulty()
     }
     
+    func checkDifficulty() {
+        if Game.shared.difficulty == .inseries {
+            difficultySwitcher.setOn(false, animated: true)
+        } else if Game.shared.difficulty == .random {
+            difficultySwitcher.setOn(true, animated: true)
+        }
+    }
 
     /*
     // MARK: - Navigation
@@ -33,11 +42,13 @@ class DifficultyViewController: UIViewController {
     @IBAction func strategySwitcher(_ sender: UISwitch) {
         
         if difficultySwitcher.isOn {
-            print("!!!!-IS ON-!!!")
+            print("!!!!- Случайно -!!!")
             Game.shared.difficulty = .random
+            print("\(Game.shared.difficulty)")
         } else if !difficultySwitcher.isOn {
-            print("!!!!-IS OFF-!!!")
+            print("!!!!- Последовательно -!!!")
             Game.shared.difficulty = .inseries
+            print("\(Game.shared.difficulty)")
         }
     }
     

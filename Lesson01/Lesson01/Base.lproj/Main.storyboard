@@ -53,6 +53,20 @@
                                     <segue destination="oXB-83-try" kind="presentation" id="cEK-Xm-hUH"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwI-t4-ZqE">
+                                <rect key="frame" x="97" y="503" width="220" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="OMF-Yz-ueJ"/>
+                                    <constraint firstAttribute="height" constant="40" id="hKy-rH-vLx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <state key="normal" title="Добавить свой вопрос">
+                                    <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="SoF-Nu-Ubf" kind="show" id="c04-EX-d4w"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -63,11 +77,13 @@
                             <constraint firstItem="RWw-dY-2C2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="89" id="O6h-xD-1MO"/>
                             <constraint firstItem="RWw-dY-2C2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="RR4-d4-0Wf"/>
                             <constraint firstItem="BAn-ok-Xm6" firstAttribute="top" secondItem="myN-ji-zLb" secondAttribute="bottom" constant="37" id="Rer-Gg-k00"/>
+                            <constraint firstItem="xwI-t4-ZqE" firstAttribute="top" secondItem="BAn-ok-Xm6" secondAttribute="bottom" constant="20" id="SE1-2y-YKj"/>
                             <constraint firstItem="myN-ji-zLb" firstAttribute="leading" secondItem="BAn-ok-Xm6" secondAttribute="leading" id="UqH-VZ-eK2"/>
                             <constraint firstItem="myN-ji-zLb" firstAttribute="top" secondItem="EG0-14-gBi" secondAttribute="bottom" constant="30" id="VzL-Yg-7ao"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EG0-14-gBi" secondAttribute="trailing" constant="120" id="ZuK-7y-ImA"/>
                             <constraint firstItem="EG0-14-gBi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="acB-vg-yMl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BAn-ok-Xm6" secondAttribute="trailing" constant="120" id="uBq-4G-3hm"/>
+                            <constraint firstItem="xwI-t4-ZqE" firstAttribute="centerX" secondItem="BAn-ok-Xm6" secondAttribute="centerX" id="ydP-af-Ebl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -75,6 +91,124 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="253.62318840579712" y="-27.455357142857142"/>
+        </scene>
+        <!--Add Question View Controller-->
+        <scene sceneID="bsN-o8-OoJ">
+            <objects>
+                <viewController id="SoF-Nu-Ubf" customClass="AddQuestionViewController" customModule="Lesson01" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aOs-sN-vlY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ваш вопрос" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k0v-VE-ozh">
+                                <rect key="frame" x="78.5" y="30" width="257" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="257" id="3XQ-sh-7Z7"/>
+                                    <constraint firstAttribute="height" constant="34" id="uI3-i1-MyA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Вариант ответа А" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oqo-Vb-n5c">
+                                <rect key="frame" x="78.5" y="104" width="257" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Xky-gJ-gBI"/>
+                                    <constraint firstAttribute="width" constant="257" id="agk-nI-6FK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Вариант ответа В" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Icc-mU-obk">
+                                <rect key="frame" x="78.5" y="153" width="257" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="257" id="0cN-gQ-UYj"/>
+                                    <constraint firstAttribute="height" constant="34" id="4cl-5t-M6x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Вариант ответа С" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AkN-W4-Wmx">
+                                <rect key="frame" x="78.5" y="202" width="257" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="257" id="15P-h5-RVS"/>
+                                    <constraint firstAttribute="height" constant="30" id="CSM-l6-xbK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Вариант ответа D" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="net-Ke-xzc">
+                                <rect key="frame" x="78.5" y="247" width="257" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="257" id="70U-HV-ncF"/>
+                                    <constraint firstAttribute="height" constant="34" id="Nwr-ZU-Rdo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="blj-Wi-fpq">
+                                <rect key="frame" x="157" y="347" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Xbl-n2-hL6"/>
+                                    <constraint firstAttribute="height" constant="30" id="ghy-YH-qAv"/>
+                                </constraints>
+                                <state key="normal" title="Добавить"/>
+                                <connections>
+                                    <action selector="addQuestionButton:" destination="SoF-Nu-Ubf" eventType="touchUpInside" id="Xpl-Xz-gBp"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="max-ek-MVY">
+                                <rect key="frame" x="220.5" y="296" width="115" height="32"/>
+                                <segments>
+                                    <segment title="A"/>
+                                    <segment title="B"/>
+                                    <segment title="C"/>
+                                    <segment title="D"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Верный ответ:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCW-Ta-KGO">
+                                <rect key="frame" x="78.5" y="301" width="120" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="rJS-1Q-eCq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="net-Ke-xzc" firstAttribute="centerX" secondItem="aOs-sN-vlY" secondAttribute="centerX" id="0Dl-Qo-fID"/>
+                            <constraint firstItem="blj-Wi-fpq" firstAttribute="centerX" secondItem="aOs-sN-vlY" secondAttribute="centerX" id="0Wk-uh-aJk"/>
+                            <constraint firstItem="Icc-mU-obk" firstAttribute="centerX" secondItem="aOs-sN-vlY" secondAttribute="centerX" id="2Iw-3u-tPf"/>
+                            <constraint firstItem="net-Ke-xzc" firstAttribute="top" secondItem="AkN-W4-Wmx" secondAttribute="bottom" constant="15" id="5d0-6Y-Gw5"/>
+                            <constraint firstItem="eCW-Ta-KGO" firstAttribute="centerY" secondItem="max-ek-MVY" secondAttribute="centerY" id="Abi-Eu-Lgs"/>
+                            <constraint firstItem="max-ek-MVY" firstAttribute="top" secondItem="net-Ke-xzc" secondAttribute="bottom" constant="15" id="Dvu-tM-qn7"/>
+                            <constraint firstItem="oqo-Vb-n5c" firstAttribute="top" secondItem="k0v-VE-ozh" secondAttribute="bottom" constant="40" id="Edi-Eu-ExT"/>
+                            <constraint firstItem="blj-Wi-fpq" firstAttribute="top" secondItem="max-ek-MVY" secondAttribute="bottom" constant="20" id="O4m-Aa-TS9"/>
+                            <constraint firstItem="k0v-VE-ozh" firstAttribute="top" secondItem="cw4-yH-QzA" secondAttribute="top" constant="30" id="O6N-Zd-YM3"/>
+                            <constraint firstItem="oqo-Vb-n5c" firstAttribute="centerX" secondItem="aOs-sN-vlY" secondAttribute="centerX" id="XNh-4p-gyk"/>
+                            <constraint firstItem="k0v-VE-ozh" firstAttribute="centerX" secondItem="aOs-sN-vlY" secondAttribute="centerX" id="e0t-qz-Jcn"/>
+                            <constraint firstItem="eCW-Ta-KGO" firstAttribute="leading" secondItem="net-Ke-xzc" secondAttribute="leading" id="eC9-TF-llQ"/>
+                            <constraint firstItem="max-ek-MVY" firstAttribute="trailing" secondItem="net-Ke-xzc" secondAttribute="trailing" id="hEY-Jf-XMa"/>
+                            <constraint firstItem="Icc-mU-obk" firstAttribute="top" secondItem="oqo-Vb-n5c" secondAttribute="bottom" constant="15" id="jj4-z3-kS8"/>
+                            <constraint firstItem="AkN-W4-Wmx" firstAttribute="top" secondItem="Icc-mU-obk" secondAttribute="bottom" constant="15" id="vAt-lP-daB"/>
+                            <constraint firstItem="AkN-W4-Wmx" firstAttribute="centerX" secondItem="aOs-sN-vlY" secondAttribute="centerX" id="y3f-vc-UvI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cw4-yH-QzA"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jXL-Ta-PzC"/>
+                    <connections>
+                        <outlet property="ansverATextFiel" destination="oqo-Vb-n5c" id="8zm-7E-ltP"/>
+                        <outlet property="ansverBTextFiel" destination="Icc-mU-obk" id="cwM-yM-BHi"/>
+                        <outlet property="ansverCTextFiel" destination="AkN-W4-Wmx" id="ZZh-iF-5cp"/>
+                        <outlet property="ansverDTextFiel" destination="net-Ke-xzc" id="de5-lg-msf"/>
+                        <outlet property="ansverSegmentControl" destination="max-ek-MVY" id="5Ex-xh-jJJ"/>
+                        <outlet property="questionTextFiel" destination="k0v-VE-ozh" id="Cah-DZ-sDQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="05E-iL-k7K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1107.2463768115942" y="495.53571428571428"/>
         </scene>
         <!--Score Table View Controller-->
         <scene sceneID="DhO-O0-9da">
@@ -103,7 +237,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6f7-my-IvR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1196" y="396"/>
+            <point key="canvasLocation" x="2074" y="126"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="93a-oT-5ga">
@@ -198,9 +332,11 @@
                                 <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RBu-y5-K2a">
-                                <rect key="frame" x="304" y="44" width="80" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RBu-y5-K2a">
+                                <rect key="frame" x="304" y="44" width="100" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Vd2-Rb-4C4"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -215,6 +351,7 @@
                             <constraint firstItem="vck-v6-hA7" firstAttribute="top" secondItem="GLm-v4-9st" secondAttribute="bottom" constant="100" id="D6D-Ip-7Is"/>
                             <constraint firstItem="SOJ-Xe-aUy" firstAttribute="trailing" secondItem="ZFY-n2-BmG" secondAttribute="trailing" constant="30" id="E1U-Sy-1p3"/>
                             <constraint firstItem="Q4V-IA-COP" firstAttribute="top" secondItem="SOJ-Xe-aUy" secondAttribute="top" constant="130" id="ECS-gi-R4T"/>
+                            <constraint firstItem="SOJ-Xe-aUy" firstAttribute="trailing" secondItem="RBu-y5-K2a" secondAttribute="trailing" constant="10" id="GDp-O1-3bX"/>
                             <constraint firstItem="ZFY-n2-BmG" firstAttribute="centerY" secondItem="GLm-v4-9st" secondAttribute="centerY" id="K5c-Vz-4NW"/>
                             <constraint firstItem="vck-v6-hA7" firstAttribute="leading" secondItem="SOJ-Xe-aUy" secondAttribute="leading" constant="60" id="K5d-FC-oIf"/>
                             <constraint firstItem="bYx-dT-7Rb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vck-v6-hA7" secondAttribute="trailing" constant="10" id="MeB-FW-LUT"/>
@@ -227,6 +364,7 @@
                             <constraint firstItem="SOJ-Xe-aUy" firstAttribute="trailing" secondItem="XQm-MX-AC8" secondAttribute="trailing" constant="30" id="WgM-TW-iTc"/>
                             <constraint firstItem="SOJ-Xe-aUy" firstAttribute="trailing" secondItem="Q4V-IA-COP" secondAttribute="trailing" constant="60" id="gye-0y-p2o"/>
                             <constraint firstItem="Q4V-IA-COP" firstAttribute="leading" secondItem="SOJ-Xe-aUy" secondAttribute="leading" constant="60" id="ifJ-F2-hGd"/>
+                            <constraint firstItem="RBu-y5-K2a" firstAttribute="top" secondItem="SOJ-Xe-aUy" secondAttribute="top" id="jav-ZN-67G"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SOJ-Xe-aUy"/>
                     </view>
@@ -243,7 +381,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aos-PS-ygH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1195.6521739130435" y="-451.33928571428567"/>
+            <point key="canvasLocation" x="1196" y="-767"/>
         </scene>
         <!--Difficulty View Controller-->
         <scene sceneID="Lwl-Nt-das">
@@ -253,7 +391,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bnA-Xa-Bl5">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bnA-Xa-Bl5">
                                 <rect key="frame" x="182.5" y="405.5" width="51" height="31"/>
                                 <connections>
                                     <action selector="strategySwitch:forEvent:" destination="xwL-DE-Oxj" eventType="editingDidEndOnExit" id="Fhi-Z6-w7h"/>
@@ -291,7 +429,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ygh-Jt-ETc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="xwL-DE-Oxj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1932" y="-27"/>
+            <point key="canvasLocation" x="2075" y="-543"/>
         </scene>
     </scenes>
 </document>

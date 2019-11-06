@@ -38,9 +38,15 @@ class GameViewController: UIViewController {
         // Do any additional setup after loading the view.
         newQuestion()
         gameSession.questionsCount = questions.count
+        
+        questionsScoreLabel.text = "0% / \(questions.count)"
+        checkDifficulty()
         gameSession.rightAnswer.addObserver(self, options: [.new], closure: {
             [weak self] rightAnswer, _ in
-            self?.questionsScoreLabel.text = "\(rightAnswer/(self?.questions.count)!) / \(String(describing: self?.questions.count))"
+            let percentRightAnswers = (Double(rightAnswer) / Double(self!.questions.count)) * 100
+            print("Percent Right Answers => \(percentRightAnswers)")
+
+            self!.questionsScoreLabel.text = "\(String(format: "%.2f", percentRightAnswers))% / \(self!.questions.count)"
             print("Value => NEW \(rightAnswer)")
         })
     }
@@ -74,7 +80,17 @@ class GameViewController: UIViewController {
             self.delegate?.didFinishGame(withScore: gameSession)
             self.dismiss(animated: true, completion: nil)
         }
-        gameSession.rightAnswer = Observable(numberOfQuestion)
+        gameSession.rightAnswer.value = numberOfQuestion
+    }
+    
+    func checkDifficulty() {
+        if Game.shared.difficulty == .inseries {
+            print("🗯 \(Game.shared.difficulty)")
+            print("🗯 \(Game.shared.getQuestions())")
+        } else if Game.shared.difficulty == .random {
+            print("🗯 \(Game.shared.difficulty)")
+            print("🗯 \(Game.shared.getQuestions())")
+        }
     }
 
 

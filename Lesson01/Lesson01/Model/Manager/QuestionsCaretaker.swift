@@ -15,10 +15,10 @@ class QuestionsCaretaker {
     
     private let key = "question"
     
-    func save(scores: [Question]) {
+    func save(_ questions: [Question]) {
         
         do {
-            let data = try self.encode.encode(scores)
+            let data = try self.encode.encode(questions)
             UserDefaults.standard.set(data, forKey: key)
         } catch {
             print(error)
@@ -27,7 +27,7 @@ class QuestionsCaretaker {
     
     func retriveQuestions() -> [Question] {
         
-        guard let data = UserDefaults.standard.data(forKey: key) else { return addQuestions() }
+        guard let data = UserDefaults.standard.data(forKey: key) else { return generateQuestions() }
         
         do {
             return try self.decode.decode([Question].self, from: data)
@@ -37,7 +37,7 @@ class QuestionsCaretaker {
         }
     }
     
-    func addQuestions() -> [Question] {
+    func generateQuestions() -> [Question] {
         
         var questions: [Question] = []
         
@@ -63,7 +63,7 @@ class QuestionsCaretaker {
         questions.append(question9)
         questions.append(question10)
         
-        save(scores: questions)
+        save(questions)
         
         return questions
     }
