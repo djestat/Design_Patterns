@@ -53,9 +53,17 @@ public class PCInputState: GameState {
         if player == .first {
             self.gameboard?.setPlayer(self.player, at: position)
         } else if player == .second {
-            self.gameboard?.setPC(self.player)
+            var position: GameboardPosition
+            repeat {
+                let column = Int.random(in: 1...3)
+                let row = Int.random(in: 1...3)
+                position = GameboardPosition(column: column, row: row)
+            } while !(self.gameboard?.contains(player: player, at: position))!
+            self.gameboard?.setPlayer(self.player, at: position)
+            
         }
         self.gameboardView?.placeMarkView(markView, at: position)
         self.isCompleted = true
     }
+    
 }
