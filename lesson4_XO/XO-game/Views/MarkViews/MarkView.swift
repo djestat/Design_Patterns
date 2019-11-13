@@ -12,7 +12,7 @@ public class MarkView: UIView {
     
     // MARK: - Properties
     
-    public var lineColor: UIColor = .black
+    public var lineColor: UIColor = .systemBlue
     public var lineWidth: CGFloat = 7
     public var textColor: UIColor = .red {
         didSet { label.textColor = textColor }

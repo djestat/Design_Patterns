@@ -1,14 +1,14 @@
 //
-//  PlayerInputState.swift
+//  PCInputState.swift
 //  XO-game
 //
-//  Created by Igor on 12.11.2019.
+//  Created by Igor on 13.11.2019.
 //  Copyright © 2019 plasmon. All rights reserved.
 //
 
 import Foundation
 
-public class PlayerInputState: GameState {
+public class PCInputState: GameState {
     
     public private(set) var isCompleted = false
     
@@ -49,7 +49,12 @@ public class PlayerInputState: GameState {
         case .second:
             markView = OView()
         }
-        self.gameboard?.setPlayer(self.player, at: position)
+        
+        if player == .first {
+            self.gameboard?.setPlayer(self.player, at: position)
+        } else if player == .second {
+            self.gameboard?.setPC(self.player)
+        }
         self.gameboardView?.placeMarkView(markView, at: position)
         self.isCompleted = true
     }

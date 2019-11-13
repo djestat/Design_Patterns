@@ -20,6 +20,19 @@ public final class Gameboard {
         positions[position.column][position.row] = player
     }
     
+    public func setPC(_ pc: Player) {
+        var position: GameboardPosition
+        repeat {
+            
+            let column = Int.random(in: 1...3)
+            let row = Int.random(in: 1...3)
+
+            position = GameboardPosition(column: column, row: row)
+        } while !contains(player: pc, at: position)
+        
+        positions[position.column][position.row] = pc
+    }
+    
     public func clear() {
         self.positions = initialPositions()
     }

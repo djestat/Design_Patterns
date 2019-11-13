@@ -16,6 +16,8 @@ class GameViewController: UIViewController {
     @IBOutlet var winnerLabel: UILabel!
     @IBOutlet var restartButton: UIButton!
     
+    public var opponentPC = true
+    
     private let gameboard = Gameboard()
     private var currentState: GameState! {
         didSet {
@@ -40,10 +42,18 @@ class GameViewController: UIViewController {
     }
     
     private func goToFirstState() {
-        self.currentState = PlayerInputState(player: .first,
+        if !opponentPC {
+            self.currentState = PlayerInputState(player: .first,
+                                                 gameViewController: self,
+                                                 gameboard: gameboard,
+                                                 gameboardView: gameboardView)
+        } else if opponentPC {
+            self.currentState = PCInputState(player: .first,
                                              gameViewController: self,
                                              gameboard: gameboard,
                                              gameboardView: gameboardView)
+        }
+        
     }
     
     private func goToNextState() {
@@ -57,10 +67,17 @@ class GameViewController: UIViewController {
                                                  gameboard: gameboard,
                                                  gameboardView: gameboardView)
         }
+        if let pcInputState = currentState as? PCInputState {
+            self.currentState = PCInputState(player: pcInputState.player.next,
+                                             gameViewController: self,
+                                             gameboard: gameboard,
+                                             gameboardView: gameboardView)
+        }
     }
     
     @IBAction func restartButtonTapped(_ sender: UIButton) {
-        
+        Log(.restartGame)
+        self.dismiss(animated: true, completion: nil)
     }
 }
 
