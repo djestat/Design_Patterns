@@ -1,7 +1,7 @@
 {
     "result": [{
-        "name": "John2",
-        "age": 32,
+        "name": "John",
+        "age": 30,
         "isDeveloper": true
     }, {
         "name": "Alex",

@@ -98,6 +98,17 @@ func parseData(_ data: Data) -> [Person] {
 }
 
 
-parseData(data1)
-parseData(data2)
-parseData(data3)
+let dataDict = parseData(data1)
+let result = parseData(data2)
+let array = parseData(data3)
+
+func description(_ array: [Person]) {
+    for i in 0..<array.count {
+        print("Name: \(array[i].name) Age: \(array[i].age) Developer: \(array[i].isDeveloper)")
+    }
+    print("\n")
+}
+
+description(dataDict)
+description(result)
+description(array)

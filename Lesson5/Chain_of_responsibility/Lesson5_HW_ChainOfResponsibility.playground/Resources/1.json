@@ -1,7 +1,7 @@
 {
     "data": [{
-        "name": "John1",
-        "age": 31,
+        "name": "John",
+        "age": 30,
         "isDeveloper": true
     }, {
         "name": "Alex",
