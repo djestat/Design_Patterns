@@ -14,127 +14,90 @@ let data3 = data(from: "3")
 
 //MARK: - Release
 
-enum DataDictionary {
-    case data
-}
-
-enum ResultDictionary {
-    case result
-}
-
-enum Array {
-    case dictionary
-}
-
-class Person: Codable {
+struct Person: Decodable {
     var name: String
     var age: Int
     var isDeveloper: Bool
+}
+
+struct  DataDictionary: Decodable {
+    let data: [Person]
+}
+
+struct  ResultDictionary: Decodable {
+    let result: [Person]
+}
+
+protocol ParserHandler {
     
-    init(name: String, age: Int, isDeveloper: Bool) {
-        self.name = name
-        self.age = age
-        self.isDeveloper = isDeveloper
-    }
-}
-
-func parseData(_ data: Data, completion: @escaping (Error?) -> Void) -> [Person] {
+    var next: ParserHandler? { get set }
     
-    return []
+    func parserData(_ data: Data) -> [Person]
 }
 
-
-
-// Need DELETE
-
-
-enum LoginError: Error {
-    case loginDoesNotExist
-    case wrongPassword
-    case smsCodeInvalid
-}
-
-enum NetworkError: Error {
-    case noConnection
-    case serverNotResponding
-}
-
-enum GeneralError: Error {
-    case sessionInvalid
-    case versionIsNotSupported
-    case general
-}
-
-func requestData(completion: @escaping (Error?) -> Void) {
-    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
-        completion(GeneralError.sessionInvalid)
-    })
-}
-
-protocol ErrorHandler {
+class DataDictionaryParserHandler: ParserHandler {
+    var next: ParserHandler?
     
-    var next: ErrorHandler? { get set }
-    
-    func handleError(_ error: Error)
-}
-
-class LoginErrorHandler: ErrorHandler {
-    
-    var next: ErrorHandler?
-    
-    func handleError(_ error: Error) {
-        guard let loginError = error as? LoginError else {
-            self.next?.handleError(error)
-            return
+    func parserData(_ data: Data) -> [Person] {
+        do {
+            let decoder = JSONDecoder()
+            let persons = try decoder.decode(DataDictionary.self, from: data).data
+            return persons
+        } catch {
+            self.next?.parserData(data)
         }
-        print(loginError)
-        // show tooltip
+        return (self.next?.parserData(data))!
     }
 }
 
-class NetworkErrorHandler: ErrorHandler {
+class ResultDictionaryParserHandler: ParserHandler {
+    var next: ParserHandler?
     
-    var next: ErrorHandler?
-    
-    func handleError(_ error: Error) {
-        guard let networkError = error as? NetworkError else {
-            self.next?.handleError(error)
-            return
+    func parserData(_ data: Data) -> [Person] {
+        do {
+            let decoder = JSONDecoder()
+            
+            let persons = try decoder.decode(ResultDictionary.self, from: data).result
+            return persons
+        } catch {
+            self.next?.parserData(data)
         }
-        print(networkError)
-        // show alert
-        // try repeat network request
+        return (self.next?.parserData(data))!
     }
 }
 
-class GeneralErrorHandler: ErrorHandler {
+class ArrayParserHandler: ParserHandler {
+    var next: ParserHandler?
     
-    var next: ErrorHandler?
-    
-    func handleError(_ error: Error) {
-        guard let generalError = error as? GeneralError else {
-            self.next?.handleError(error)
-            return
+    func parserData(_ data: Data) -> [Person] {
+        do {
+            let decoder = JSONDecoder()
+            let persons = try decoder.decode([Person].self, from: data)
+            return persons
+        } catch {
+            self.next?.parserData(data)
         }
-        print(generalError)
-        // show error view controller
-        // try repeat request
-        // log error
+        return []
     }
 }
 
 
-let loginErrorHandler = LoginErrorHandler()
-let networkErrorHandler = NetworkErrorHandler()
-let generalErrorHandler = GeneralErrorHandler()
-let errorHandler: ErrorHandler = loginErrorHandler
 
-loginErrorHandler.next = networkErrorHandler
-networkErrorHandler.next = generalErrorHandler
-generalErrorHandler.next = nil
-
-requestData { error in
-    if let error = error {
-        errorHandler.handleError(error)
-    }
+func parseData(_ data: Data) -> [Person] {
+    
+    let dataDictionaryParserHandler = DataDictionaryParserHandler()
+    let resultDictionaryParserHandler = ResultDictionaryParserHandler()
+    let arrayParserHandler = ArrayParserHandler()
+    let parserHandler: ParserHandler = dataDictionaryParserHandler
+    
+    dataDictionaryParserHandler.next = resultDictionaryParserHandler
+    resultDictionaryParserHandler.next = arrayParserHandler
+    arrayParserHandler.next = nil
+    
+    return parserHandler.parserData(data)
 }
+
+
+parseData(data1)
+parseData(data2)
+parseData(data3)
