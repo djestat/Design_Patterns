@@ -1,6 +1,6 @@
 [{
-    "name": "John3",
-    "age": 33,
+    "name": "John",
+    "age": 30,
     "isDeveloper": true
 }, {
     "name": "Alex",
