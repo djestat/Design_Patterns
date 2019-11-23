@@ -49,7 +49,7 @@ class AppDetailScreenshotViewController: UIViewController {
 
 extension AppDetailScreenshotViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(app.screenshotUrls.count)
+//        print(app.screenshotUrls.count)
         return app.screenshotUrls.count
     }
     
@@ -60,9 +60,9 @@ extension AppDetailScreenshotViewController: UICollectionViewDataSource {
         let screenshotURL = app.screenshotUrls[indexPath.item]
         self.imageDownloader.getImage(fromUrl: screenshotURL) { (image, _) in
             cell.imageView.image = image
-            print("Size image: \(String(describing: image))")
+//            print("Size image: \(String(describing: image))")
         }
-        print("\(screenshotURL)")
+//        print("\(screenshotURL)")
         return cell
     }
 }

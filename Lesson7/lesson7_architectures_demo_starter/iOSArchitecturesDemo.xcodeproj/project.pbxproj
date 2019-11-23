@@ -12,6 +12,8 @@
 		CED3BF9A23896B030009D98F /* AppDetailScreenshotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3BF9923896B030009D98F /* AppDetailScreenshotView.swift */; };
 		CED3BF9D23896DCB0009D98F /* AppDetailDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3BF9C23896DCB0009D98F /* AppDetailDescriptionView.swift */; };
 		CED3BF9F2389798B0009D98F /* ScreenshotViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3BF9E2389798B0009D98F /* ScreenshotViewCell.swift */; };
+		CED3BFA42389E6F40009D98F /* AppDetailVersionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3BFA32389E6F40009D98F /* AppDetailVersionViewController.swift */; };
+		CED3BFA72389E87E0009D98F /* AppDetailVersionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3BFA62389E87E0009D98F /* AppDetailVersionView.swift */; };
 		CEF7A66F238479670011A233 /* AppDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7A66E238479670011A233 /* AppDetailHeaderView.swift */; };
 		CEF7A67223847A060011A233 /* AppDetailHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7A67123847A060011A233 /* AppDetailHeaderViewController.swift */; };
 		E0E1D2932034A3350011E01A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E1D2922034A3350011E01A /* AppDelegate.swift */; };
@@ -44,6 +46,8 @@
 		CED3BF9923896B030009D98F /* AppDetailScreenshotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailScreenshotView.swift; sourceTree = "<group>"; };
 		CED3BF9C23896DCB0009D98F /* AppDetailDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailDescriptionView.swift; sourceTree = "<group>"; };
 		CED3BF9E2389798B0009D98F /* ScreenshotViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotViewCell.swift; sourceTree = "<group>"; };
+		CED3BFA32389E6F40009D98F /* AppDetailVersionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailVersionViewController.swift; sourceTree = "<group>"; };
+		CED3BFA62389E87E0009D98F /* AppDetailVersionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailVersionView.swift; sourceTree = "<group>"; };
 		CEF7A66E238479670011A233 /* AppDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailHeaderView.swift; sourceTree = "<group>"; };
 		CEF7A67123847A060011A233 /* AppDetailHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailHeaderViewController.swift; sourceTree = "<group>"; };
 		E0E1D28F2034A3350011E01A /* iOSArchitecturesDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSArchitecturesDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +124,22 @@
 				CED3BF9C23896DCB0009D98F /* AppDetailDescriptionView.swift */,
 			);
 			path = AppDetailDescriptionView;
+			sourceTree = "<group>";
+		};
+		CED3BFA22389E6C80009D98F /* AppDetailVersionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CED3BFA32389E6F40009D98F /* AppDetailVersionViewController.swift */,
+			);
+			path = AppDetailVersionViewController;
+			sourceTree = "<group>";
+		};
+		CED3BFA52389E8630009D98F /* AppDetailVersionView */ = {
+			isa = PBXGroup;
+			children = (
+				CED3BFA62389E87E0009D98F /* AppDetailVersionView.swift */,
+			);
+			path = AppDetailVersionView;
 			sourceTree = "<group>";
 		};
 		CEF7A66D238479530011A233 /* AppDetailHeaderView */ = {
@@ -347,6 +367,7 @@
 			isa = PBXGroup;
 			children = (
 				CEF7A66D238479530011A233 /* AppDetailHeaderView */,
+				CED3BFA52389E8630009D98F /* AppDetailVersionView */,
 				CED3BF9823896AA90009D98F /* AppDetailScreenshotView */,
 				CED3BF9B23896DA00009D98F /* AppDetailDescriptionView */,
 				F8114FC422A3E77500102830 /* AppDetailView.swift */,
@@ -358,6 +379,7 @@
 			isa = PBXGroup;
 			children = (
 				CEF7A670238479FA0011A233 /* AppDetailHeaderViewController */,
+				CED3BFA22389E6C80009D98F /* AppDetailVersionViewController */,
 				CED3BF92238969290009D98F /* AppDetailScreenshotViewController */,
 				CED3BF95238969800009D98F /* AppDetailDescriptionViewController */,
 				E0E1D3D0203C48D70011E01A /* AppDetailViewController.swift */,
@@ -551,6 +573,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0E1D399203AE62E0011E01A /* ITunesApp.swift in Sources */,
+				CED3BFA42389E6F40009D98F /* AppDetailVersionViewController.swift in Sources */,
 				F8A97B352249898E00FB2C0E /* AppCell.swift in Sources */,
 				F8114FC522A3E77500102830 /* AppDetailView.swift in Sources */,
 				E0E1D387203AE45F0011E01A /* WebRequest.swift in Sources */,
@@ -567,6 +590,7 @@
 				E0E1D39F203AE7400011E01A /* ImageDownloader.swift in Sources */,
 				CED3BF972389699F0009D98F /* AppDetailDescriptionViewController.swift in Sources */,
 				F8114FBE22A3DBF400102830 /* SearchView.swift in Sources */,
+				CED3BFA72389E87E0009D98F /* AppDetailVersionView.swift in Sources */,
 				E0E1D395203AE5E20011E01A /* ITunesSearchResult.swift in Sources */,
 				E0E1D392203AE58B0011E01A /* ITunesSearchService.swift in Sources */,
 				E0E1D2932034A3350011E01A /* AppDelegate.swift in Sources */,
@@ -708,7 +732,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JR32BVRSKV;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/iOSArchitecturesDemo/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.igorlab;
@@ -724,7 +748,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JR32BVRSKV;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/iOSArchitecturesDemo/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.igorlab;

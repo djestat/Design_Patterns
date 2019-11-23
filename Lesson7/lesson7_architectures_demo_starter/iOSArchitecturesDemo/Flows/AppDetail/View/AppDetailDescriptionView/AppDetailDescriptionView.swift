@@ -16,6 +16,7 @@ class AppDetailDescriptionView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
+        label.textAlignment = .left
         label.font = UIFont.systemFont(ofSize: 11.0)
         label.numberOfLines = .max
         return label
