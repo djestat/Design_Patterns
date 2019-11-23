@@ -13,6 +13,8 @@ final class AppDetailViewController: UIViewController {
     let app: ITunesApp
     
     lazy var headerViewController = AppDetailHeaderViewController(app: self.app)
+    lazy var screenshotsViewController = AppDetailScreenshotViewController(app: self.app)
+    lazy var descriptionViewController = AppDetailDescriptionViewController(app: self.app)
     
     init(app: ITunesApp) {
         self.app = app
@@ -33,6 +35,7 @@ final class AppDetailViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = UIColor.white;
         self.navigationItem.largeTitleDisplayMode = .never
         self.addHeaderViewController()
+        self.addScreenshotsViewController()
         self.addDescriptionViewController()
     }
     
@@ -49,9 +52,23 @@ final class AppDetailViewController: UIViewController {
             ])
     }
     
+    private func addScreenshotsViewController() {
+        
+        self.addChild(screenshotsViewController)
+        self.view.addSubview(screenshotsViewController.view)
+        screenshotsViewController.didMove(toParent: self)
+        
+        screenshotsViewController.view.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            screenshotsViewController.view.topAnchor.constraint(equalTo: self.headerViewController.view.bottomAnchor),
+            screenshotsViewController.view.leftAnchor.constraint(equalTo: self.view.leftAnchor),
+            screenshotsViewController.view.rightAnchor.constraint(equalTo: self.view.rightAnchor),
+            screenshotsViewController.view.heightAnchor.constraint(equalToConstant: 260.0)
+        ])
+    }
+    
     private func addDescriptionViewController() {
         // TODO: ДЗ, сделать другие сабмодули
-        let descriptionViewController = UIViewController()
         
         self.addChild(descriptionViewController)
         self.view.addSubview(descriptionViewController.view)
@@ -59,10 +76,12 @@ final class AppDetailViewController: UIViewController {
         
         descriptionViewController.view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            descriptionViewController.view.topAnchor.constraint(equalTo: self.headerViewController.view.bottomAnchor),
+            descriptionViewController.view.topAnchor.constraint(equalTo: self.screenshotsViewController.view.bottomAnchor),
             descriptionViewController.view.leftAnchor.constraint(equalTo: self.view.leftAnchor),
             descriptionViewController.view.rightAnchor.constraint(equalTo: self.view.rightAnchor),
-            descriptionViewController.view.heightAnchor.constraint(equalToConstant: 250.0)
+            descriptionViewController.view.heightAnchor.constraint(equalToConstant: 240.0)
             ])
     }
+    
+    
 }

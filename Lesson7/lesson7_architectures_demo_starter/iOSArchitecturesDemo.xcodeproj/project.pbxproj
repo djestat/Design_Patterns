@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CED3BF94238969650009D98F /* AppDetailScreenshotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3BF93238969650009D98F /* AppDetailScreenshotViewController.swift */; };
+		CED3BF972389699F0009D98F /* AppDetailDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3BF962389699F0009D98F /* AppDetailDescriptionViewController.swift */; };
+		CED3BF9A23896B030009D98F /* AppDetailScreenshotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3BF9923896B030009D98F /* AppDetailScreenshotView.swift */; };
+		CED3BF9D23896DCB0009D98F /* AppDetailDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3BF9C23896DCB0009D98F /* AppDetailDescriptionView.swift */; };
+		CED3BF9F2389798B0009D98F /* ScreenshotViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3BF9E2389798B0009D98F /* ScreenshotViewCell.swift */; };
 		CEF7A66F238479670011A233 /* AppDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7A66E238479670011A233 /* AppDetailHeaderView.swift */; };
 		CEF7A67223847A060011A233 /* AppDetailHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7A67123847A060011A233 /* AppDetailHeaderViewController.swift */; };
-		CEF7A67B23847EE50011A233 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7A67A23847EE50011A233 /* SearchPresenter.swift */; };
-		CEF7A67D23847F200011A233 /* SongSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7A67C23847F200011A233 /* SongSearchView.swift */; };
-		CEF7A680238480180011A233 /* SearchSongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7A67F238480180011A233 /* SearchSongViewController.swift */; };
-		CEF7A683238485D50011A233 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7A682238485D50011A233 /* Builder.swift */; };
 		E0E1D2932034A3350011E01A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E1D2922034A3350011E01A /* AppDelegate.swift */; };
 		E0E1D2952034A3350011E01A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E1D2942034A3350011E01A /* SearchViewController.swift */; };
 		E0E1D29A2034A3350011E01A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0E1D2992034A3350011E01A /* Assets.xcassets */; };
@@ -38,12 +39,13 @@
 		8BE349225151AE13B1EDE333 /* Pods-iOSArchitecturesDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSArchitecturesDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSArchitecturesDemo/Pods-iOSArchitecturesDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		8EEA6AF9F424A0D5873D2723 /* Pods_iOSArchitecturesDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSArchitecturesDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A067E149D296BC0C249FD11F /* Pods-iOSArchitecturesDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSArchitecturesDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSArchitecturesDemo/Pods-iOSArchitecturesDemo.release.xcconfig"; sourceTree = "<group>"; };
+		CED3BF93238969650009D98F /* AppDetailScreenshotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailScreenshotViewController.swift; sourceTree = "<group>"; };
+		CED3BF962389699F0009D98F /* AppDetailDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailDescriptionViewController.swift; sourceTree = "<group>"; };
+		CED3BF9923896B030009D98F /* AppDetailScreenshotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailScreenshotView.swift; sourceTree = "<group>"; };
+		CED3BF9C23896DCB0009D98F /* AppDetailDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailDescriptionView.swift; sourceTree = "<group>"; };
+		CED3BF9E2389798B0009D98F /* ScreenshotViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotViewCell.swift; sourceTree = "<group>"; };
 		CEF7A66E238479670011A233 /* AppDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailHeaderView.swift; sourceTree = "<group>"; };
 		CEF7A67123847A060011A233 /* AppDetailHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailHeaderViewController.swift; sourceTree = "<group>"; };
-		CEF7A67A23847EE50011A233 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
-		CEF7A67C23847F200011A233 /* SongSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongSearchView.swift; sourceTree = "<group>"; };
-		CEF7A67F238480180011A233 /* SearchSongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSongViewController.swift; sourceTree = "<group>"; };
-		CEF7A682238485D50011A233 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		E0E1D28F2034A3350011E01A /* iOSArchitecturesDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSArchitecturesDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0E1D2922034A3350011E01A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0E1D2942034A3350011E01A /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +87,39 @@
 				A067E149D296BC0C249FD11F /* Pods-iOSArchitecturesDemo.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		CED3BF92238969290009D98F /* AppDetailScreenshotViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CED3BF93238969650009D98F /* AppDetailScreenshotViewController.swift */,
+			);
+			path = AppDetailScreenshotViewController;
+			sourceTree = "<group>";
+		};
+		CED3BF95238969800009D98F /* AppDetailDescriptionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CED3BF962389699F0009D98F /* AppDetailDescriptionViewController.swift */,
+			);
+			path = AppDetailDescriptionViewController;
+			sourceTree = "<group>";
+		};
+		CED3BF9823896AA90009D98F /* AppDetailScreenshotView */ = {
+			isa = PBXGroup;
+			children = (
+				CED3BF9923896B030009D98F /* AppDetailScreenshotView.swift */,
+				CED3BF9E2389798B0009D98F /* ScreenshotViewCell.swift */,
+			);
+			path = AppDetailScreenshotView;
+			sourceTree = "<group>";
+		};
+		CED3BF9B23896DA00009D98F /* AppDetailDescriptionView */ = {
+			isa = PBXGroup;
+			children = (
+				CED3BF9C23896DCB0009D98F /* AppDetailDescriptionView.swift */,
+			);
+			path = AppDetailDescriptionView;
 			sourceTree = "<group>";
 		};
 		CEF7A66D238479530011A233 /* AppDetailHeaderView */ = {
@@ -142,7 +177,6 @@
 		CEF7A67723847EA00011A233 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CEF7A67C23847F200011A233 /* SongSearchView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -150,7 +184,6 @@
 		CEF7A67823847EA80011A233 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				CEF7A67A23847EE50011A233 /* SearchPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -165,7 +198,6 @@
 		CEF7A67E23847FC90011A233 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CEF7A67F238480180011A233 /* SearchSongViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -173,7 +205,6 @@
 		CEF7A681238484D30011A233 /* Builder */ = {
 			isa = PBXGroup;
 			children = (
-				CEF7A682238485D50011A233 /* Builder.swift */,
 			);
 			path = Builder;
 			sourceTree = "<group>";
@@ -316,6 +347,8 @@
 			isa = PBXGroup;
 			children = (
 				CEF7A66D238479530011A233 /* AppDetailHeaderView */,
+				CED3BF9823896AA90009D98F /* AppDetailScreenshotView */,
+				CED3BF9B23896DA00009D98F /* AppDetailDescriptionView */,
 				F8114FC422A3E77500102830 /* AppDetailView.swift */,
 			);
 			path = View;
@@ -325,6 +358,8 @@
 			isa = PBXGroup;
 			children = (
 				CEF7A670238479FA0011A233 /* AppDetailHeaderViewController */,
+				CED3BF92238969290009D98F /* AppDetailScreenshotViewController */,
+				CED3BF95238969800009D98F /* AppDetailDescriptionViewController */,
 				E0E1D3D0203C48D70011E01A /* AppDetailViewController.swift */,
 			);
 			path = Controller;
@@ -515,29 +550,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEF7A683238485D50011A233 /* Builder.swift in Sources */,
 				E0E1D399203AE62E0011E01A /* ITunesApp.swift in Sources */,
 				F8A97B352249898E00FB2C0E /* AppCell.swift in Sources */,
-				CEF7A67B23847EE50011A233 /* SearchPresenter.swift in Sources */,
 				F8114FC522A3E77500102830 /* AppDetailView.swift in Sources */,
 				E0E1D387203AE45F0011E01A /* WebRequest.swift in Sources */,
+				CED3BF9F2389798B0009D98F /* ScreenshotViewCell.swift in Sources */,
 				F8A1E03C2248382F00FE6448 /* Monads.swift in Sources */,
 				CEF7A67223847A060011A233 /* AppDetailHeaderViewController.swift in Sources */,
 				E0E1D3D4203C4AA50011E01A /* UIColor+Extensions.swift in Sources */,
 				CEF7A66F238479670011A233 /* AppDetailHeaderView.swift in Sources */,
 				E0E1D3D1203C48D70011E01A /* AppDetailViewController.swift in Sources */,
-				CEF7A67D23847F200011A233 /* SongSearchView.swift in Sources */,
-				CEF7A680238480180011A233 /* SearchSongViewController.swift in Sources */,
 				E0E1D358203ADC590011E01A /* NetworkManager.swift in Sources */,
 				E0E1D39C203AE6420011E01A /* ITunesSong.swift in Sources */,
+				CED3BF94238969650009D98F /* AppDetailScreenshotViewController.swift in Sources */,
 				E0E1D2952034A3350011E01A /* SearchViewController.swift in Sources */,
 				E0E1D39F203AE7400011E01A /* ImageDownloader.swift in Sources */,
+				CED3BF972389699F0009D98F /* AppDetailDescriptionViewController.swift in Sources */,
 				F8114FBE22A3DBF400102830 /* SearchView.swift in Sources */,
 				E0E1D395203AE5E20011E01A /* ITunesSearchResult.swift in Sources */,
 				E0E1D392203AE58B0011E01A /* ITunesSearchService.swift in Sources */,
 				E0E1D2932034A3350011E01A /* AppDelegate.swift in Sources */,
 				E0E1D384203AE3620011E01A /* AppStartManager.swift in Sources */,
 				F8114FC122A3E5EE00102830 /* AppCellModel.swift in Sources */,
+				CED3BF9A23896B030009D98F /* AppDetailScreenshotView.swift in Sources */,
+				CED3BF9D23896DCB0009D98F /* AppDetailDescriptionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
