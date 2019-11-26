@@ -12,32 +12,29 @@ import UIKit
 //Управлять отображением View (через ViewInput).
 
 
-protocol ViewProtocol: class {
-    // Fist Load with this protocol
-    // PRESENTER -> VIEW
-    func loadPlaylist(playlist: [Playlist])
-}
-
-protocol PresenterProtocol: class {
-    //View -> Presenter
-    var interactor: IteractorViewInput? {get set}
-    var view: ViewProtocol? {get set}
-    func viewDidLoad()
-
-}
-
 class Presenter: PresenterProtocol {
-    var interactor: IteractorViewInput?
+    var interactor: InteractorViewInputProtocol?
     
-    var view: ViewProtocol?
+    weak var view: ViewProtocol?
     
-    func viewDidLoad() {
-        loadPlaylist()
+    func play() {
+        view?.next()
     }
     
-    func loadPlaylist() {
-        interactor?.loadPlaylist()
+    func pause() {
+        view?.pause()
     }
     
+    func stop() {
+        view?.stop()
+    }
     
+    func previous() {
+        view?.previous()
+    }
+    
+    func next() {
+        view?.next()
+    }
+ 
 }

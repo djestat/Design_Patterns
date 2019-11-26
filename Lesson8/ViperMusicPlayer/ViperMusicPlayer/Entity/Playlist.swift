@@ -11,8 +11,19 @@ import Foundation
 class Playlist {
     let playlist: [MusicTrack]
     
-    init(playlist: [MusicTrack]) {
-        self.playlist = playlist
+    init() {        
+        var myPlaylist: [MusicTrack] = []
+        for i in 0...10 {
+            
+            let artist = "Artist \(i)"
+            let nameSong = "Song \(i) name"
+            let duration = Int.random(in: 6...10)
+            
+            let song = MusicTrack(artist: artist, nameSong: nameSong, duration: duration)
+            
+            myPlaylist.append(song)
+        }
+        self.playlist = myPlaylist
     }
 }
 
