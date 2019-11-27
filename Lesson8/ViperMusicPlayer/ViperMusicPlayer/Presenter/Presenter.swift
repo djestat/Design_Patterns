@@ -13,28 +13,64 @@ import UIKit
 
 
 class Presenter: PresenterProtocol {
+
     var interactor: InteractorViewInputProtocol?
     
-    weak var view: ViewProtocol?
+//    weak var view: ViewProtocol?
+    
+    weak var progressView: UIProgressView?
+
+    init(interactor: InteractorViewInputProtocol, view: UIProgressView) {
+        self.interactor = interactor
+        self.progressView = view
+    }
     
     func play() {
-        view?.next()
+        interactor?.play()
     }
     
     func pause() {
-        view?.pause()
+        interactor?.pause()
     }
     
     func stop() {
-        view?.stop()
+        interactor?.stop()
     }
     
     func previous() {
-        view?.previous()
+        interactor?.previous()
     }
     
     func next() {
-        view?.next()
+        interactor?.next()
     }
  
+}
+
+extension Presenter: InteractorViewOutputProtocol {
+    
+    
+    func play(with progress: Float) {
+        <#code#>
+    }
+    
+    func pause(with progress: Float) {
+        <#code#>
+    }
+    
+    func stop(with progress: Float) {
+        <#code#>
+    }
+    
+    func previous(with song: Int) {
+        <#code#>
+    }
+    
+    func next(with song: Int) {
+        <#code#>
+    }
+    
+    
+  
+    
 }

@@ -104,6 +104,7 @@
                     </view>
                     <connections>
                         <outlet property="artistLabel" destination="kQJ-Ul-YwA" id="hkh-BD-CW2"/>
+                        <outlet property="progressView" destination="UaO-2Y-RY9" id="EwU-CT-ffg"/>
                         <outlet property="songLabel" destination="WJy-U5-0RO" id="xLX-ou-NJ4"/>
                     </connections>
                 </viewController>

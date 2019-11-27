@@ -8,17 +8,21 @@
 
 import UIKit
 
-class ViewController: UIViewController, ViewProtocol {
+class ViewController: UIViewController, ViewProtocol {    
     
     @IBOutlet weak var artistLabel: UILabel!
     @IBOutlet weak var songLabel: UILabel!
     
-    var presenter = Presenter()
+    @IBOutlet weak var progressView: UIProgressView!
+    
+    var interactor = Interactor()
+    var presenter: Presenter?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.presenter = Presenter(interactor: self.interactor, view: progressView)
     }
     
     func play() {
