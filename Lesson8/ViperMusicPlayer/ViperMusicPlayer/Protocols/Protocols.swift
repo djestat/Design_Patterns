@@ -54,7 +54,7 @@ protocol InteractorViewOutputProtocol: class {
     
     var progressView: UIProgressView? {get set}
     
-    func play(with progress: Float)
+    func play(with progress: Float, artist: String, song: String)
     func pause(with progress: Float)
     func stop(with progress: Float)
     func previous(with song: Int)

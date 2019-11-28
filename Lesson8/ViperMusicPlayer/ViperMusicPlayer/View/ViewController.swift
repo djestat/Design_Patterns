@@ -22,7 +22,9 @@ class ViewController: UIViewController, ViewProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.presenter = Presenter(interactor: self.interactor, view: progressView)
+        artistLabel.text = "-"
+        songLabel.text = "-"
+        self.presenter = Presenter(interactor: self.interactor, view: progressView, artist: artistLabel, song: songLabel)
         interactor.presenter = presenter
     }
     

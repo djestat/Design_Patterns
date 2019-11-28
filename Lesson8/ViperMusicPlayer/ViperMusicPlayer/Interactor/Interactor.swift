@@ -45,8 +45,10 @@ class Interactor: InteractorViewInputProtocol {
                 }
                 
                 let second = Float(self!.currentPlayPosition) / Float(self!.endPlayPosition)
+                let artist = self!.playlist?.playlist[self!.playingTack].artist
+                let song = self!.playlist?.playlist[self!.playingTack].nameSong
                 
-                self!.presenter?.play(with: second)
+                self!.presenter?.play(with: second, artist: artist!, song: song!)
                 
                 //            print("currentPlayPosition: \(self!.currentPlayPosition)")
                 //            print("endPlayPosition: \(self!.endPlayPosition)")
