@@ -25,38 +25,59 @@ class Interactor: InteractorViewInputProtocol {
     
     init() {
         playlist = Playlist()
-        
-        let dateNow: Date = Date(timeInterval: 0, since: .init())
-        let timeInterval: TimeInterval = 1.0
-        
-        timer = Timer.init(fire: dateNow, interval: timeInterval, repeats: true) { _ in
-            print("One sec")
-            
-        }
-        
-        timer!.fire()
     }
-    
-    func startTimer(with start: Int) -> Int{
-        
-        
-                
-        
-        return
-    }
-    
     
     func play() {
-        let secont = Float(startPlaying())
-        presenter?.play(with: secont)
+
+        if nil == timer {
+            timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: {  [weak self] timer in
+                
+                if self!.currentPlayPosition == self!.endPlayPosition {
+                    self!.currentPlayPosition = 0
+                    if self!.playingTack == (self!.playlist?.playlist.count)! - 1 {
+                        self!.playingTack = 0
+                    } else {
+                        self!.playingTack += 1
+                    }
+                    self!.endPlayPosition = (self!.playlist?.playlist[self!.playingTack].duration)!
+                } else {
+                    self!.currentPlayPosition += 1
+                }
+                
+                let second = Float(self!.currentPlayPosition) / Float(self!.endPlayPosition)
+                
+                self!.presenter?.play(with: second)
+                
+                //            print("currentPlayPosition: \(self!.currentPlayPosition)")
+                //            print("endPlayPosition: \(self!.endPlayPosition)")
+                //            print("playingTack: \(self!.playingTack)")
+                //            print("Timer sec: \(second)")
+            })
+        }
+        
+        print("Interactor: InteractorViewInputProtocol")
     }
     
     func pause() {
-        presenter?.pause(with: 0.5)
+        let second = Float(self.currentPlayPosition) / Float(self.endPlayPosition)
+        presenter?.pause(with: second)
+        
+        if nil != timer {
+            if timer!.isValid {
+                timer?.invalidate()
+                timer = nil
+            } else if !timer!.isValid {
+                play()
+            }
+        }
+        
     }
     
     func stop() {
         presenter?.stop(with: 0)
+        currentPlayPosition = 0
+        timer?.invalidate()
+        timer = nil
     }
     
     func previous() {
@@ -66,9 +87,7 @@ class Interactor: InteractorViewInputProtocol {
     }
     
     func next() {
-        let currentTrack = playlist?.playlist.index(after: 0)
-        
-        presenter?.next(with: currentTrack!)
+
     }
     
     deinit {

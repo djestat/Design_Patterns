@@ -23,18 +23,19 @@ class ViewController: UIViewController, ViewProtocol {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.presenter = Presenter(interactor: self.interactor, view: progressView)
+        interactor.presenter = presenter
     }
     
     func play() {
-        
+        presenter?.play()
     }
     
     func pause() {
-        
+        presenter?.pause()
     }
     
     func stop() {
-        
+        presenter?.stop()
     }
     
     func previous() {

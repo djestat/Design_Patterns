@@ -25,8 +25,12 @@ class Presenter: PresenterProtocol {
         self.progressView = view
     }
     
+    init() {
+    }
+    
     func play() {
         interactor?.play()
+        print("Presenter: PresenterProtocol")
     }
     
     func pause() {
@@ -51,26 +55,24 @@ extension Presenter: InteractorViewOutputProtocol {
     
     
     func play(with progress: Float) {
-        <#code#>
+        progressView?.progress = progress
+        print("Presenter: InteractorViewOutputProtocol \(progress)")
     }
     
     func pause(with progress: Float) {
-        <#code#>
+        progressView?.progress = progress
     }
     
     func stop(with progress: Float) {
-        <#code#>
+        progressView?.progress = progress
     }
     
     func previous(with song: Int) {
-        <#code#>
+        
     }
     
     func next(with song: Int) {
-        <#code#>
+        
     }
-    
-    
-  
-    
+
 }
