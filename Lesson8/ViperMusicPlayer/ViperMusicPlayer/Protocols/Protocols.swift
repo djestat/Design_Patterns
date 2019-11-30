@@ -11,6 +11,10 @@ import UIKit
 
 protocol ViewProtocol: class {
     // PRESENTER -> VIEW
+    
+    var progressView: UIProgressView? { get set }
+    var artistLabel: UILabel?  { get set }
+    var songLabel: UILabel?  { get set }
 
     func play()
     func pause()
@@ -52,12 +56,18 @@ protocol InteractorViewInputProtocol: class {
 protocol InteractorViewOutputProtocol: class {
     //Interactor -> Presenter
     
-    var progressView: UIProgressView? {get set}
+//    var presenterView: UIProgressView? {get set}
     
     func play(with progress: Float, artist: String, song: String)
     func pause(with progress: Float)
     func stop(with progress: Float)
     func previous(with song: Int)
     func next(with song: Int)
+    
+}
+
+protocol PlayerRouterInput {
+    
+    func openPlayer()
     
 }

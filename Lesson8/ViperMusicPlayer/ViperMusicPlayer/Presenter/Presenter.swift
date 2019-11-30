@@ -16,17 +16,17 @@ class Presenter: PresenterProtocol {
 
     var interactor: InteractorViewInputProtocol?
     
-//    weak var view: ViewProtocol?
+    weak var view: ViewProtocol?
     
-    weak var progressView: UIProgressView?
-    weak var artistLabel: UILabel?
-    weak var songLabel: UILabel?
+//    weak var progressView: UIProgressView?
+//    weak var artistLabel: UILabel?
+//    weak var songLabel: UILabel?
 
-    init(interactor: InteractorViewInputProtocol, view: UIProgressView, artist: UILabel, song: UILabel) {
+    init(interactor: InteractorViewInputProtocol) {
         self.interactor = interactor
-        self.progressView = view
-        self.artistLabel = artist
-        self.songLabel = song
+//        self.progressView = view
+//        self.artistLabel = artist
+//        self.songLabel = song
     }
     
     init() {
@@ -59,18 +59,18 @@ extension Presenter: InteractorViewOutputProtocol {
     
     
     func play(with progress: Float, artist: String, song: String) {
-        progressView?.progress = progress
-        artistLabel?.text = artist
-        songLabel?.text = song
+        view?.progressView?.progress = progress
+        view?.artistLabel?.text = artist
+        view?.songLabel?.text = song
         print("Presenter: InteractorViewOutputProtocol \(progress)")
     }
     
     func pause(with progress: Float) {
-        progressView?.progress = progress
+        view!.progressView?.progress = progress
     }
     
     func stop(with progress: Float) {
-        progressView?.progress = progress
+        view!.progressView?.progress = progress
     }
     
     func previous(with song: Int) {

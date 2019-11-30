@@ -1,19 +1,19 @@
 //
-//  ViewController.swift
+//  PlayerViewController.swift
 //  ViperMusicPlayer
 //
-//  Created by Igor on 24.11.2019.
+//  Created by Igor on 30.11.2019.
 //  Copyright © 2019 Igor Gapanovich. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController, ViewProtocol {    
+class PlayerViewController: UIViewController, ViewProtocol {
+
+    @IBOutlet weak var artistLabel: UILabel?
+    @IBOutlet weak var songLabel: UILabel?
     
-    @IBOutlet weak var artistLabel: UILabel!
-    @IBOutlet weak var songLabel: UILabel!
-    
-    @IBOutlet weak var progressView: UIProgressView!
+    @IBOutlet weak var progressView: UIProgressView?
     
     var interactor = Interactor()
     var presenter: Presenter?
@@ -22,10 +22,13 @@ class ViewController: UIViewController, ViewProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        artistLabel.text = "-"
-        songLabel.text = "-"
-        self.presenter = Presenter(interactor: self.interactor, view: progressView, artist: artistLabel, song: songLabel)
+        
+        artistLabel?.text = "-"
+        songLabel?.text = "-"
+        self.presenter = Presenter(interactor: self.interactor)
+        presenter?.view = self
         interactor.presenter = presenter
+
     }
     
     func play() {
@@ -59,6 +62,5 @@ class ViewController: UIViewController, ViewProtocol {
     @IBAction func stopAction(_ sender: Any) {
         stop()
     }
-    
-}
 
+}

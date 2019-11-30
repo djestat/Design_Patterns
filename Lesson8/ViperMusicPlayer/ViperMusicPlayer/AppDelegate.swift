@@ -12,9 +12,18 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+//        let frame = UIScreen.main.bounds
+//        let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.last
+//        window?.frame = frame
+//        let router = Router()
+//        router.openPlayer()
+//        let viewController = router.viewController
+//        window?.rootViewController = viewController
+//        window?.makeKeyAndVisible()
+        
         return true
     }
 
